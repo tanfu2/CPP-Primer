@@ -21,3 +21,9 @@ const int *const v = &u;  //指向常量的常量指针
 const int *p = nullptr;     //p是指向常量的指针
 constexpr int *q = nullptr; //q是指向常量的指针
 ```
+### 2.5 处理类型
+- 类型别名
+```C++
+typedef int integer;  //传统定义
+using int = integer;  //C++11别名声明
+```
