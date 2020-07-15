@@ -27,3 +27,8 @@ constexpr int *q = nullptr; //q是指向常量的指针
 typedef int integer;  //传统定义
 using int = integer;  //C++11别名声明
 ```
+- auto类型说明符
+```C++
+int i = 0, &r = i;
+auto a = r;         //引用对象的类型作为auto的类型，所以a的类型是int
+```
