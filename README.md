@@ -31,4 +31,20 @@ using int = integer;  //C++11别名声明
 ```C++
 int i = 0, &r = i;
 auto a = r;         //引用对象的类型作为auto的类型，所以a的类型是int
+
+/*
+auto一般会忽略顶层const，保留底层const
+*/
+
+const int ci = i, &cr = ci;
+auto b = ci;    //int
+auto c = cr;    //int
+auto d = &i;    //int *
+auto e = &ci;   //const int *
+
+/*
+如果希望推断出的auto类型是一个顶层const，需要明确指出
+*/
+
+const auto f = ci;    //const int
 ```
