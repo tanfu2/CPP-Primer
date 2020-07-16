@@ -48,3 +48,10 @@ auto e = &ci;   //const int *
 
 const auto f = ci;    //const int
 ```
+- decltype类型指示符
+```C++
+//decltype的表达式如果是加上了括号的变量，结果将是引用
+int i = 0;
+decltype((i)) d;  //错误:d是int&，必须初始化
+decltype(i) e;    //正确:e是(未初始化的)int
+```
